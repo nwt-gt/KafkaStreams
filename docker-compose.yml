@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  kafka:
+    build:
+      context: ./kafka
+      dockerfile: Dockerfile
+      target: kafka_base
+    image: kafka
+    container_name: kafka
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+
+
